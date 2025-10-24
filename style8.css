@@ -1,0 +1,187 @@
+/* suma1 par2 licencia-de-conducir3  multiplicar4  promedio5  vocal6   num-mas-grande7 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd5ff, #ffe6ff);
+    color: #4b004b;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d66bff;
+    padding: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Main grid */
+main {
+    display: grid;
+    grid-template-areas: 
+    "suma1 par2"
+    "licencia-de-conducir3 multiplicar4"
+    "promedio5 vocal6"
+    "num-mas-grande7 num-mas-grande7";
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Estilo general para las secciones */
+#suma1, #par2, #licencia-de-conducir3, #multiplicar4, #promedio5, #vocal6, #num-mas-grande7 {
+    margin: 10px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#suma1:hover, #par2:hover, #licencia-de-conducir3:hover, #multiplicar4:hover, 
+#promedio5:hover, #vocal6:hover, #num-mas-grande7:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 101, 222, 0.3);
+}
+
+/* Inputs y labels */
+label {
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #7a007a;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f3b3ff;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #fff8ff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #d66bff;
+    box-shadow: 0 0 8px rgba(214,107,255,0.5);
+}
+
+/* Botones */
+#btn, button, input[type="button"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(90deg, #ff75e1, #d66bff);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+#btn:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff4cd9, #b44cff);
+    transform: scale(1.03);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(255, 101, 222);
+  border-radius: 8px;
+  background-color: rgb(255, 235, 255);
+  color: rgb(85, 0, 85);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 101, 222, 0.3);
+  
+}
+
+select:hover {
+  background-color: rgb(255, 220, 255);
+  box-shadow: 0 0 8px rgba(255, 101, 222, 0.6);
+}
+
+select:focus {
+  border-color: rgb(255, 7, 201);
+  box-shadow: 0 0 10px rgba(255, 7, 201, 0.6);
+}
+
+/* Opcional: estilos para las opciones del desplegable */
+option {
+  background-color: white;
+  color: rgb(85, 0, 85);
+  padding: 10px;
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d66bff;
+    flex-direction: column;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajuste interno de las secciones */
+#suma1 *, 
+#par2 *, 
+#licencia-de-conducir3 *, 
+#multiplicar4 *, 
+#promedio5 *, 
+#vocal6 * {
+    display: block;
+}
+
+/* 🌸 Responsive design */
+@media (max-width: 900px) {
+    main {
+        grid-template-areas: 
+        "suma1"
+        "par2"
+        "licencia-de-conducir3"
+        "multiplicar4"
+        "promedio5"
+        "vocal6"
+        "num-mas-grande7";
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    header {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #suma1, #par2, #licencia-de-conducir3, #multiplicar4, #promedio5, #vocal6, #num-mas-grande7 {
+        margin: 10px 0;
+    }
+}
